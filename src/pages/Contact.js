@@ -35,7 +35,7 @@ export default function Contact() {
 
   if (submitted) {
     return (
-      <div lang="en">
+      <div>
         <Navbar />
         <div style={{ padding: '8rem 4rem', textAlign: 'center' }}>
           <h1>Message Sent!</h1>
@@ -56,7 +56,7 @@ export default function Contact() {
   }
 
   return (
-    <div lang="en">
+    <div>
       <Navbar />
 
       <main>
