@@ -7,12 +7,12 @@
   --accent: #c8f04e;
   --text: #e8e8f0;
   --muted: #555568;
-  --dark-muted: #484858;   /* ~2:1 contrast — WCAG fail */
+  --dark-muted: #9595ac;   /* Adjusted for WCAG contrast (was ~2:1 contrast — WCAG fail) */
   --border: #2a2a38;
 }
 
-/* ISSUE: Global outline:none removes all focus indicators */
-* { margin:0; padding:0; box-sizing:border-box; outline:none; }
+/* FIX: Global outline:none removed to ensure default focus indicators are visible (WCAG 2.4.7) */
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body { background:var(--bg); font-family:'DM Sans',sans-serif; color:var(--text); line-height:1.6; }
 
@@ -38,7 +38,7 @@ h1 { font-family:'Syne',sans-serif; font-size:clamp(2.8rem,6vw,5rem); font-weigh
 .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); margin:4rem 4rem 0; border:1px solid var(--border); border-radius:12px; overflow:hidden; }
 .stat-item { background:var(--surface); padding:2rem; text-align:center; }
 .stat-num { font-family:'Syne',sans-serif; font-size:2.6rem; font-weight:800; color:var(--accent); }
-.stat-label { color:#4a4a5e; font-size:0.85rem; margin-top:0.3rem; } /* low contrast */
+.stat-label { color:#9090a8; font-size:0.85rem; margin-top:0.3rem; } /* Adjusted for WCAG contrast (was low contrast) */
 
 /* SERVICES */
 .services { padding:6rem 4rem; max-width:1100px; margin:0 auto; }
@@ -70,7 +70,7 @@ footer { border-top:1px solid var(--border); padding:3rem 4rem; display:flex; ju
 .team-card img { width:100%; height:180px; object-fit:cover; display:block; }
 .team-info { padding:1.2rem 1.2rem 0.5rem; }
 .team-name { font-family:'Syne',sans-serif; font-weight:700; font-size:1rem; margin-bottom:0.2rem; }
-.team-role { color:var(--dark-muted); font-size:0.82rem; } /* low contrast */
+.team-role { color:var(--dark-muted); font-size:0.82rem; } /* Fixed by adjusting --dark-muted variable */
 .team-social { display:flex; justify-content:center; gap:0.6rem; padding:0.8rem 1.2rem 1.2rem; }
 .team-social button { width:30px; height:30px; border-radius:50%; border:1px solid var(--border); background:transparent; color:var(--muted); cursor:pointer; font-size:0.75rem; }
 .values-section { background:var(--surface); padding:5rem 4rem; }
@@ -101,7 +101,7 @@ footer { border-top:1px solid var(--border); padding:3rem 4rem; display:flex; ju
 .form-group { margin-bottom:1.5rem; }
 .form-label { display:block; font-size:0.82rem; font-weight:500; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); margin-bottom:0.5rem; }
 .form-input { width:100%; background:var(--card); border:1px solid var(--border); border-radius:8px; padding:0.85rem 1rem; color:var(--text); font-family:'DM Sans',sans-serif; font-size:0.95rem; }
-.form-input::placeholder { color:#3a3a50; } /* very low contrast placeholder */
+.form-input::placeholder { color:#8a8aa0; } /* Adjusted for WCAG contrast (was very low contrast placeholder) */
 textarea.form-input { resize:vertical; min-height:140px; }
 select.form-input { appearance:none; cursor:pointer; }
 .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
