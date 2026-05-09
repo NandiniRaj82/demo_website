@@ -1,3 +1,6 @@
-# https://www.robotstxt.org/robotstxt.html
+# Allow all crawlers and scanners full access to all pages
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: /sitemap.xml
