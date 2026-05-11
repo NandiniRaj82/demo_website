@@ -9,9 +9,9 @@ export default function Navbar() {
       <Link to="/" className="logo">TechCo</Link>
 
       <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/" style={{ color: '#333' }}>Home</Link></li>
+        <li><Link to="/about" style={{ color: '#333' }}>About</Link></li>
+        <li><Link to="/contact" style={{ color: '#333' }}>Contact</Link></li>
       </ul>
 
       {/* ISSUE: Button text is just "→" — no aria-label, screen reader reads arrow literally */}

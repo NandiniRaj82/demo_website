@@ -93,10 +93,12 @@ export default function Home() {
           <img
             className="promo-img"
             src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80"
+            alt="Team collaborating on a project in an office"
           />
           <img
             className="promo-img"
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
+            alt="Professionals discussing work in a modern office"
           />
         </div>
 
